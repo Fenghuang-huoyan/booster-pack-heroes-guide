@@ -1,0 +1,38 @@
+[
+  {
+    "q": "When does Booster Pack Heroes release?",
+    "a": "Steam’s release_date field on 6 November 2026 is 10 Nov 2026, with coming_soon true. The 18 September 2026 Steam announcement gives the same date for Steam, iOS, and Android. The store page that day showed no user reviews.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes it?",
+    "a": "The Steam appdetails payload lists developer zup and publisher Funday Games. Funday’s own page describes zup games as a Brazilian one-person studio founded by Jordy Adan, and calls this his first Steam release. This wiki is not affiliated with them, or with Valve.",
+    "featured": true
+  },
+  {
+    "q": "What kind of game is Booster Pack Heroes?",
+    "a": "Steam calls it an incremental game: open booster packs of heroes and spells, spend Mastery earned by surviving, and defend a tower from monster waves while moving through realms. Funday’s page also tags it auto-battler, strategy, and tower defense. Steam’s genre list is Casual and Strategy. This site does not add a tier list.",
+    "featured": true
+  },
+  {
+    "q": "Is there a redeem code page?",
+    "a": "No. The Steam store page and the community announcements checked on 6 November 2026 do not publish a redeem-code program. This site does not invent codes, and it does not have a codes page.",
+    "featured": true
+  },
+  {
+    "q": "Did a demo exist?",
+    "a": "Yes. On 6 November 2026 the full game’s appdetails payload still listed demo app 4659940, Booster Pack Heroes Demo, with its own release date of 30 Apr 2026 and coming_soon false. The 18 September 2026 announcement placed that demo in Steam Next Fest from 19 to 26 October 2026. This site has not played the demo."
+  },
+  {
+    "q": "Can I play on Mac or Linux?",
+    "a": "The Steam appdetails platforms field on 6 November 2026 lists Windows and macOS, and Linux false. Windows minimum and recommended both say Windows 10 or 11, a dual-core CPU at 2.0 GHz, and any graphics card. The macOS block says TBD for OS, processor, and graphics. RAM and storage size are not in that requirements text."
+  },
+  {
+    "q": "Is there a price yet?",
+    "a": "Not in the sources checked. appdetails on 6 November 2026 has is_free false and an empty package_groups list, so no number was published there. The 18 September announcement says the mobile version costs the same as Steam, one upfront price, with no ads and no microtransactions, and it does not print the amount."
+  },
+  {
+    "q": "Is this site official?",
+    "a": "No. boosterpackheroes.wiki is a fan guide. It is not affiliated with zup, Funday Games, Valve, or Steam. The support email on the Steam store page is jordyadan@gmail.com. That mailbox is the developer’s, not this wiki’s."
+  }
+]

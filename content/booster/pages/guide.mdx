@@ -1,0 +1,114 @@
+---
+title: "Booster Pack Heroes Guide — How Packs, Mastery, and Waves Work"
+description: "Booster Pack Heroes strategy overview: open a booster pack, defend the tower, spend Mastery, and unlock the next realm. No invented stats or tier list."
+h1: "The booster-pack tower defense loop"
+section: "Guide"
+order: 1
+verifiedAgainst: "Steam appdetails, IStoreBrowseService, and the English store page, 6 Nov 2026. Steam community announcements dated 8 May 2026, 18 Sep 2026, 25 Sep 2026, and 19 Oct 2026. Funday Games pages read the same day."
+quickAnswer:
+  - "Booster Pack Heroes is zup’s incremental game, published by Funday Games. Steam AppID 4618570 unlocks 10 November 2026. On 6 November 2026 it was still marked coming soon, on Windows and macOS, and not free."
+  - "The store loop is four beats: open a pack of heroes and spells, survive waves aimed at a tower, spend the Mastery you earned, and beat a chapter boss to unlock the next pack."
+  - "Steam’s genre list is Casual and Strategy. Funday’s page also calls it an auto-battler, an incremental, and a tower defense. Both are official. This page does not collapse them into one slogan."
+  - "There is no redeem-code program in the sources checked, no printed drop rates, and no public Steam price. A results screen in a store screenshot is one run, not a target."
+sources:
+  - label: "Steam store — Booster Pack Heroes"
+    url: "https://store.steampowered.com/app/4618570/Booster_Pack_Heroes/"
+  - label: "Launch date, 18 Sep 2026"
+    url: "https://steamcommunity.com/app/4618570/announcements/detail/1844115010494453"
+  - label: "Next Fest demo update, 19 Oct 2026"
+    url: "https://steamcommunity.com/app/4618570/announcements/detail/1846651706691793"
+  - label: "Demo languages, 25 Sep 2026"
+    url: "https://steamcommunity.com/app/4618570/announcements/detail/1844751498225656"
+  - label: "Demo patch, 8 May 2026"
+    url: "https://steamcommunity.com/app/4618570/announcements/detail/1832065502815577"
+  - label: "Funday Games — Booster Pack Heroes"
+    url: "https://www.fundaygames.dk/booster-pack-heroes"
+related:
+  - href: "/packs"
+    label: "Packs and the shop"
+  - href: "/heroes"
+    label: "Named heroes"
+  - href: "/about"
+    label: "About"
+  - href: "/"
+    label: "Home"
+banner: "/images/official/steam/ss-00.jpg"
+bannerAlt: "Official Steam screenshot of a pixel-art fight around a central stone tower"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+This is the overview for **Booster Pack Heroes** before the 10 November 2026 unlock. It stays at the level of packs, Mastery, waves, and chapters. It does not invent hit points, drop rates, or a tier list. A name that an official post or a store screenshot did print is on [Heroes](/heroes), with the date attached. Pack and shop details are on [Packs](/packs).
+
+## What Steam says the game is
+
+The store short description says you rip open booster packs and pull your next foil hero. It calls the game an incremental where every pack could contain your next powerhouse, then tells you to defend the tower from an endless onslaught of monsters and fight through the realms.
+
+The longer store text splits that into four headings:
+
+- **Open packs.** Each pack has its own pool of heroes and spells. You hunt rare cards and build a collection.
+- **Upgrade your power.** Surviving earns Mastery. Mastery upgrades heroes and spells and unlocks new abilities.
+- **Survive the horde.** Monsters come for the tower. Waves get more dangerous. You push survival as far as you can.
+- **Travel between realms.** Beating a chapter boss unlocks new packs, heroes, spells, and challenges. The same text says there is more beyond the tower: planes of existence, each with its own secrets. It ends on a story line: the cycle has repeated countless times, and you are here to break it.
+
+Funday’s page uses the same pitch and adds the tags auto-battler, incremental, strategy, and tower defense. Steam’s genre field is only Casual and Strategy. The [itch listing](https://funday-games.itch.io/booster-pack-heroes) by Funday Games and Jordy, read on 6 November 2026, says the game is made with Unity, ships an HTML5 build, and is tagged dark fantasy, incremental, pixel art, retro, and tower defense. That page also says the average session is about an hour and that no generative AI was used. Those are the listing’s own labels. This site did not time a session.
+
+| Fact | Source on 6 Nov 2026 |
+| --- | --- |
+| Release | 10 Nov 2026. `coming_soon: true`. The 18 Sep announcement uses the same day for Steam and mobile. |
+| Developer / publisher | zup / Funday Games. Steam’s website field is https://www.fundaygames.dk/bph. |
+| Price | `is_free: false`. `package_groups` was empty, so no number was published in that payload. |
+| Platforms | Windows and macOS. Linux is false. |
+| Windows spec | Minimum and recommended match: Windows 10 or 11, dual-core at 2.0 GHz, any graphics card. RAM and disk size are not listed. |
+| macOS spec | Minimum and recommended both say TBD for OS, processor, and graphics. |
+| Languages | 11 interface languages. The API string does not mark full audio. |
+| Players | Single-player only in the category list. |
+| Demo | App 4659940, release date 30 Apr 2026, `coming_soon: false`, still linked from the full game. |
+| Account | Support URL empty. Support email jordyadan@gmail.com. |
+
+Steam also lists Steam Achievements, Steam Cloud, Family Sharing, Mouse Only Option, and Playable without Timed Input. Two further category fields came back as tokens rather than finished English labels: `#category_playable_at_your_own_pace` (id 80) and `#category_contrast_controls` (id 82). No controller-support category was in that list. No achievement count was in the payload, so this page does not invent one.
+
+Age-rating blocks in the same payload: DEJUS 6 (Violência fantasiosa), Steam Germany 6 (Fantasy-Gewalt), and IGRS 13. The top-level `required_age` is 0. Content-descriptor ids were empty.
+
+## How a run is described
+
+Nothing in the posts checked is a build order. The safe sequence is the one the store repeats.
+
+You open a pack. The pack draws from its own pool of heroes and spells. Funday’s support page says those pools sit across different rarities. The store says you are hunting rare cards, and the short description specifically mentions a foil hero. The 18 September announcement adds foil versions of heroes and tomes in the demo. Rarity names beyond “rare,” “foil,” and the later “super-rare” Interloper line are not defined on the store page. See [Packs](/packs).
+
+You then defend the tower. Store screenshots show a stone tower in the middle of a dark field, with small units around it. One frame is a spell burst labeled **Witch Doctor** with the on-screen line “+100% HP, +1 SPELL CAST.” Another is a denser crowd around the same kind of tower. Those are pictures of a build the store was showing, not a measurement of wave length or unit health.
+
+Surviving pays Mastery. The store says you spend it to upgrade heroes and spells and to unlock abilities. The 8 May 2026 demo patch, by Jordy, says boss HP bar divisors were added “to help visualize the mastery thresholds.” It does not print the thresholds. A Chapter 1 results screenshot shows a Mastery total of 350 for that frame’s run, next to “Time survived: 53s” and “Packs opened: 9,” after “COMPLETED IN 16 TRIES.” Those figures are what that one image displays. They are not a recommended pace.
+
+Beating the chapter boss is the door. The store says that unlocks new packs, heroes, spells, and challenges, and that every run feeds the next. The Chapter 1 results frame captions an unlocked pack **Advanced Pack**. The shop screenshot is labeled **Chapter 3** with the subtitle “The Witch from the Abyss.” Chapter names beyond those two frames are not listed in the announcement text.
+
+<Callout kind="warn" title="No launch roster">
+The full game was still coming soon on 6 November 2026. Demo patch notes name a handful of cards. Store screenshots name a few more. That is not a complete collection, and the numbers on a results screen can change before launch. This page does not turn either source into a tier list.
+</Callout>
+
+## Demo, Next Fest, and mobile
+
+The full game’s `demos` array on 6 November 2026 points at app **4659940**, named Booster Pack Heroes Demo, type demo, full game 4618570. That demo’s own `release_date` is 30 Apr 2026 with `coming_soon` false. This site did not launch the demo.
+
+The 18 September 2026 announcement, by stidsholt, says the game launches on 10 November and that the demo would be in Steam Next Fest from 19 to 26 October 2026. The same post’s demo-update list, for the build current that day, is: new art for heroes, monsters, environments, the tower, and buildings; a chance to find foil heroes and tomes; a new resource used to unlock shop upgrades (the resource is not named); a revamped shop; an improved collection screen; and balance plus UI changes.
+
+The 19 October 2026 post, also by stidsholt, says Next Fest had just started and that the demo gained **Interlopers**: a super-rare chance, when opening any pack, to pull a random hero from a pack that is in the full game. The same note reworks the Illusionist’s upgrades, adjusts all enemies, makes shop rolls fairer, improves the skill-tree visuals, and mentions performance with many units on screen. It links a trailer at https://www.youtube.com/watch?v=p0ybb4oI5CA. This site did not treat the trailer’s pictures as extra stats.
+
+The 25 September 2026 post, by Jordy, says the demo gained nine languages: German, Simplified Chinese, Japanese, Korean, Russian, French, Spanish, Polish, and Brazilian Portuguese. The 6 November store language list is eleven names: English, French, German, Spanish - Spain, Japanese, Korean, Polish, Portuguese - Brazil, Russian, Simplified Chinese, and Traditional Chinese. English is the obvious one missing from the “nine new” list. Traditional Chinese is on the store list and was not in that September note. This page does not guess the day it was added. None of the eleven is wrapped in the strong tag Steam uses for full audio.
+
+The 18 September announcement also says iOS and Android arrive on 10 November, identical to the Steam version, at the same cost: one upfront price, no ads, no microtransactions. It says Google Play pre-register is a launch-day notification, and that an App Store pre-order is an actual purchase. The links in that post are:
+
+- App Store: https://apps.apple.com/us/app/booster-pack-heroes/id6801113954
+- Google Play: https://play.google.com/store/apps/details?id=com.fundaygames.boosterpack&hl=en
+
+This site did not open those store pages on 6 November 2026, so it does not repeat a mobile price.
+
+<Callout kind="note" title="No codes">
+The store page and the four Steam announcements checked that day do not describe a redeem-code box. This wiki does not have a codes page.
+</Callout>
+
+## Who is making it
+
+Steam names the developer **zup** and the publisher **Funday Games**. Funday’s game page says this is a Funday & Friends project with zup games, a Brazilian one-person studio founded by Jordy Adan, and that Booster Pack Heroes is his first Steam release. The same page says he is known for the board game Cartographers, which was nominated for the Kennerspiel des Jahres. That is biography from the publisher, not a gameplay rule.
+
+The itch page’s authors line is “Funday Games, Jordy.” The Steam support email is jordyadan@gmail.com, and the support URL is blank. Funday’s public address on the support page is hello@fundaygames.dk. Neither inbox belongs to this wiki.

@@ -1,0 +1,234 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  modes: string;
+  modesNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/library-hero.jpg',
+  hero2x: '/images/official/steam/library-hero-2x.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  fight: '/images/official/steam/ss-00.jpg',
+  spell: '/images/official/steam/ss-01.jpg',
+  chapter: '/images/official/steam/ss-02.jpg',
+  horde: '/images/official/steam/ss-03.jpg',
+  shop: '/images/official/steam/ss-04.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  guide: art.fight,
+  packs: art.chapter,
+  heroes: art.spell,
+  about: art.header,
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'The loop Steam actually describes: open a pack, hold the tower, spend Mastery, clear the chapter boss.',
+    image: art.fight,
+  },
+  {
+    href: '/packs',
+    num: '02',
+    title: 'Packs',
+    text: 'Pools, foils, the shop, and the Advanced Pack on the Chapter 1 results frame. Not a drop table.',
+    image: art.capsule,
+  },
+  {
+    href: '/heroes',
+    num: '03',
+    title: 'Heroes',
+    text: 'Names that show up in a dated announcement or on a store screenshot. Not a roster and not a tier list.',
+    image: art.spell,
+  },
+];
+
+const stills = [
+  { src: art.fight, caption: 'Tower fight' },
+  { src: art.spell, caption: 'Witch Doctor frame' },
+  { src: art.chapter, caption: 'Chapter 1 results' },
+  { src: art.horde, caption: 'Denser wave' },
+  { src: art.shop, caption: 'Chapter 3 shop' },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with zup or Funday Games</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
+          sizes="(min-width: 1536px) 1536px, 100vw"
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · {siteConfig.publisher} · releases {meta.release}</p>
+          <h1>Open packs. Hold the tower.</h1>
+          <p class="lede">
+            English pages for Booster Pack Heroes: booster packs, Mastery, and the tower the store page tells you to defend.
+            The full game is still marked coming soon. Where a number was never printed, the page says so.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/packs">Packs</a>
+            <a class="btn ghost" href="/heroes">Heroes</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Start here</h2>
+        <p class="section-intro">
+          The strategy overview, the pack notes, or the names official posts and store frames actually use. There is no codes page. The sources checked do not list a redeem program.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt="" width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Five screenshots from the Steam page: a tower fight, a Witch Doctor spell, a Chapter 1 results screen, a denser wave, and the Chapter 3 shop. They are promotional frames, not a unit catalog.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.modes}</strong><span>{meta.modesNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Booster Pack Heroes is an incremental game from zup, published by Funday Games, on Steam (AppID 4618570). The store date is 10 November 2026. On 6 November 2026 the appdetails payload still marked it coming soon, Windows and macOS, and not free.',
+            'The short description says you rip open booster packs for a foil hero, defend a tower from monsters, and fight through realms. The longer text adds Mastery, chapter bosses, and new packs after each boss.',
+            'A demo app, 4659940, is still attached to the store page. Its own release date is 30 April 2026. The 18 September 2026 announcement put that demo in Steam Next Fest from 19 to 26 October.',
+            'There is no redeem-code list. Named cards on this site appear only when an announcement or a store screenshot prints the name, and a single results screen is not treated as launch balance.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page or a dated announcement is labeled with that date. A missing stat stays missing.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id] ?? art.header} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The store page and the official posts live at {siteConfig.databases.map((db, i) => (
+                <>
+                  <a href={db.href}>{db.label}</a>
+                  {i < siteConfig.databases.length - 1 ? ', ' : ''}
+                </>
+              ))}. This site is the skim: packs, Mastery, the tower, and the names those sources actually use.
+            </p>
+            <p>
+              The full game unlocks on {meta.release}. If a launch patch and this page disagree, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} is the developer and {siteConfig.publisher} is the publisher. Platforms on the API: {meta.platforms}. Genres: Casual and Strategy. The support email on the store page is jordyadan@gmail.com. The support URL field was empty.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>

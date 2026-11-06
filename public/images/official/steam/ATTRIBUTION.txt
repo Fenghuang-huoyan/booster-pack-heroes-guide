@@ -1,0 +1,61 @@
+Official Steam store assets for Booster Pack Heroes (AppID 4618570).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 6 Nov 2026.
+Asset paths come from IStoreBrowseService GetItems (include_assets) and appdetails screenshots.
+The unhashed library_hero.jpg, library_hero_2x.jpg, and header.jpg URLs returned HTTP 404 that day.
+Fan site: not affiliated with zup, Funday Games, Valve, or Steam.
+Store page: https://store.steampowered.com/app/4618570/Booster_Pack_Heroes/
+CDN prefix: https://shared.fastly.steamstatic.com/store_item_assets/
+Cache token on these files: t=1793693495
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/34addfcd7fb9ecec6ba3ca43fe68ed843b184cda/library_hero.jpg?t=1793693495
+
+library-hero-2x.jpg
+  Steam library hero, 3840x1240
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/34addfcd7fb9ecec6ba3ca43fe68ed843b184cda/library_hero_2x.jpg?t=1793693495
+
+library-capsule.jpg
+  Steam library capsule, 300x450
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/ce7cf9d8a12a2077598876b0a5722c822de4ac60/library_capsule.jpg?t=1793693495
+
+hero-capsule.jpg
+  Steam hero capsule, 374x448
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/afd3468dbb589155ef9c25239409021e94974cab/hero_capsule.jpg?t=1793693495
+
+header.jpg
+  Classic store header, 460x215 (hashed path)
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/b23824cde8f828abb42f3ef497f37657475ba505/header.jpg?t=1793693495
+
+capsule-616x353.jpg
+  Store capsule, 616x353 (hashed path)
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/cfd270242b96d8f634cd460de0b7ed398184ff8d/capsule_616x353.jpg?t=1793693495
+
+capsule-231x87.jpg
+  Small store capsule, 231x87 (hashed path)
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/8b62c08999084ce62388de82e646e4f681d47333/capsule_231x87.jpg?t=1793693495
+
+Screenshots are the 600x338 store thumbnails from appdetails on 6 Nov 2026 (t=1793693495).
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+Labels quoted in the guide were read from those full-size frames. They are one promotional frame each, not a balance sheet.
+
+ss-00.jpg
+  Pixel-art fight around a central stone tower on a dark field.
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/d2ac089172e19fb6c724b94ceaf485f067b9b193/ss_d2ac089172e19fb6c724b94ceaf485f067b9b193.600x338.jpg?t=1793693495
+
+ss-01.jpg
+  A spell burst labeled Witch Doctor, with the line "+100% HP, +1 SPELL CAST", beside the tower.
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/3d1184ef1df7075b26cdf1dc45962336af4debdb/ss_3d1184ef1df7075b26cdf1dc45962336af4debdb.600x338.jpg?t=1793693495
+
+ss-02.jpg
+  A "CHAPTER 1 COMPLETE!" results screen that unlocks a pack captioned Advanced Pack.
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/f5f7e54863ae0d35b8881f89919d7c13c03de80a/ss_f5f7e54863ae0d35b8881f89919d7c13c03de80a.600x338.jpg?t=1793693495
+
+ss-03.jpg
+  A denser fight around the same style of tower, with more units on screen.
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/40c5379e44939bf8f0f258e5137d28e798704762/ss_40c5379e44939bf8f0f258e5137d28e798704762.600x338.jpg?t=1793693495
+
+ss-04.jpg
+  Shop panel beside an upgrade node graph. The frame is labeled Chapter 3, "The Witch from the Abyss".
+  https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4618570/4596c9010fdbcad3c0c283f141cbd1e7ca22f8b4/ss_4596c9010fdbcad3c0c283f141cbd1e7ca22f8b4.600x338.jpg?t=1793693495
