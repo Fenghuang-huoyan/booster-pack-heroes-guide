@@ -1,0 +1,12 @@
+{
+  "release": "10 Nov 2026",
+  "price": "10 Nov 2026",
+  "priceNote": "Steam release date. appdetails on 6 Nov 2026 still marked the game coming soon. is_free is false, and package_groups was empty, so no public price was in that payload.",
+  "players": "Single-player",
+  "playersNote": "The only player category in appdetails is Single-player. This is not a live player count.",
+  "reviews": "Win + Mac",
+  "reviewsNote": "appdetails platforms on 6 Nov 2026: Windows and macOS true, Linux false. Mac specs say TBD. The store page showed no user reviews.",
+  "modes": "Packs + tower",
+  "modesNote": "Open packs, spend Mastery, defend the tower. Steam genres are Casual and Strategy. The publisher page also says tower defense.",
+  "platforms": "Windows and macOS"
+}
