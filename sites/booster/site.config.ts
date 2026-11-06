@@ -23,7 +23,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial English guide to Booster Pack Heroes (Steam AppID 4618570). zup and Funday Games, release 10 Nov 2026, booster packs, Mastery, and tower defense. Not affiliated with the developers or Valve.',
   analytics: {
-    gaId: '',
+    gaId: 'G-JY97F8GEWW',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
